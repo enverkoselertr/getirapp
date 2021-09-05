@@ -5,8 +5,8 @@ import axios from 'axios'
 import ReactPaginate from 'react-paginate'
 import { JSON_API } from '../../helper/constans'
 import { connect } from 'react-redux';
-
 import ItemType from '../site_settings/components/ItemType';
+
 class Products extends Component {
     constructor(props) {
         super(props);

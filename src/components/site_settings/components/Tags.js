@@ -48,8 +48,8 @@ class Tags extends Component {
                             this.renderTags(sttTags.toString().split(',')).map((element) => {
                                 return (
                                     <div class="form-check text-start">
-                                        <input class="form-check-input" type="checkbox" value={element.name} id={element.name} onChange={e => e.target.checked ? this.props.tagFilter(e.target.value) : this.props.tagDelete(e.target.value)} />
-                                        <label class="form-check-label" for={element.name}>
+                                        <input className="form-check-input" type="checkbox" value={element.name} id={element.name} onChange={e => e.target.checked ? this.props.tagFilter(e.target.value) : this.props.tagDelete(e.target.value)} />
+                                        <label className="form-check-label" for={element.name}>
                                             {element.name} <span className="help-text">({element.count})</span>
                                         </label>
                                     </div>

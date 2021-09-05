@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux';
 import { brandFilter, brandDelete } from '../../../redux'
-import { JSON_API } from '../../helper/constans'
+import { JSON_API } from '../../../helper/constans'
 class Brands extends Component {
     constructor(props) {
         super(props);

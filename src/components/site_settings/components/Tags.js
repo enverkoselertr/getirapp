@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import axios from 'axios'
 import { connect } from 'react-redux';
 import { tagFilter, tagDelete } from '../../../redux'
-import { JSON_API } from '../../helper/constans'
+import { JSON_API } from '../../../helper/constans'
 class Tags extends Component {
     constructor(props) {
         super(props);

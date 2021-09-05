@@ -1,3 +1,4 @@
+import './Products.css'
 import React, { Component } from 'react'
 import Card from './components/Card'
 import axios from 'axios'

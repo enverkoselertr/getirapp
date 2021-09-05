@@ -1,3 +1,4 @@
+import './Settings.css'
 import React, { Component } from 'react'
 import Sorting from './components/sorting'
 import Brands from './components/Brands'

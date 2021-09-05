@@ -1,0 +1,26 @@
+.product-name{
+    font-size: 16px;
+    font-weight: 500;
+    text-align: left;
+    display: block;
+    height: 50px;
+  }
+  .product-price{
+    font-size: 20px;
+    font-weight: 700;
+    display: block;
+    text-align: left;
+  }
+  
+  .products-card{
+    margin-bottom: 15px;
+    transition: all ease-in-out 0.4s;
+  }
+  .products-card .btn{
+  margin-top: 10px;
+  }
+
+  
+.product-pagination{
+    overflow-y: auto;
+  }

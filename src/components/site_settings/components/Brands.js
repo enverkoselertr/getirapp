@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux';
 import { brandFilter, brandDelete } from '../../../redux'
 import { JSON_API } from '../../../helper/constans'
+import axios from 'axios'
 class Brands extends Component {
     constructor(props) {
         super(props);
@@ -13,23 +14,14 @@ class Brands extends Component {
         this.searchBrand();
     }
     searchBrand = async (event) => {
-       let url = event == undefined ? '' : '?name_like=' + event.target.value.toLowerCase()
-        await fetch(`${JSON_API}/companies` + url)
-            .then(res => res.json())
-            .then(
-                (result) => { 
-                    this.setState({
-                        brands: result
-                    });
-                },
-                (error) => {
-                    this.setState({
-                        error
-                    });
-                }
-            )
+        let url = event == undefined ? '' : '?name_like=' + event.target.value.toLowerCase()
+        await axios.get(`${JSON_API}/companies` + url)
+            .then(res => {
+                this.setState({
+                    brands: res.data
+                });
+            });
     }
-    
     render() {
         const { brands } = this.state;
         return (
@@ -39,18 +31,18 @@ class Brands extends Component {
                     <div className="form-group">
                         <input type="search" className="form-control" placeholder="Search Brand" id="searchBrand" onChange={this.searchBrand} />
                         <div className="setting-scroll ps-1">
-                        {
-                            brands.map((element) => {
-                                return (
-                                    <div class="form-check text-start">
-                                        <input class="form-check-input" type="checkbox" value={element.slug} id={element.slug} onChange={e => e.target.checked ? this.props.brandFilter(e.target.value) : this.props.brandDelete(e.target.value)} />
-                                        <label class="form-check-label" for={element.slug}>
-                                            {element.name}
-                                        </label>
-                                    </div>
-                                )
-                            })
-                        }
+                            {
+                                brands.map((element) => {
+                                    return (
+                                        <div class="form-check text-start">
+                                            <input class="form-check-input" type="checkbox" value={element.slug} id={element.slug} onChange={e => e.target.checked ? this.props.brandFilter(e.target.value) : this.props.brandDelete(e.target.value)} />
+                                            <label class="form-check-label" for={element.slug}>
+                                                {element.name}
+                                            </label>
+                                        </div>
+                                    )
+                                })
+                            }
                         </div>
                     </div>
                 </div>

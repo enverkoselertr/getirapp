@@ -5,9 +5,6 @@ const PORT = process.env.PORT || 3000;
 const middlewares = jsonServer.defaults({
   static: './build'
 });
-server.use(jsonServer.rewriter({
-  '/api/*': '/$1',
-}))
 
 server.use(router);
 server.use(middlewares);

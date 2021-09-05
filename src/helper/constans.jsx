@@ -1,2 +1,2 @@
-export const JSON_API = 'https://getirapps.herokuapp.com/api'
+export const JSON_API = 'http://localhost:5000'
 // 'https://getirappenverkoseler.herokuapp.com/api'  

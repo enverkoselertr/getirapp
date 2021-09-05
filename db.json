@@ -1,5 +1,5 @@
 {
-    "companies": {
+    
       "companies": [
         {
           "slug": "Dickens-Franecki",
@@ -221,9 +221,9 @@
           "account": 21650895,
           "contact": "Cletus Hessel"
         }
-      ]
-    },
-    "items": {
+      ],
+    
+    
       "items": [
         {
           "tags": [
@@ -23830,5 +23830,5 @@
           "itemType": "shirt"
         }
       ]
-    }
+    
   }

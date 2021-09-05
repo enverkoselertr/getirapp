@@ -1,0 +1,1 @@
+export const ITMTYPE_FILTER = 'ITMTYPE_FILTER'

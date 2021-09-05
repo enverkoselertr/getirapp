@@ -44,7 +44,7 @@ class Products extends Component {
     }
     getProducts = async (currentPage, sort, filterBrand, filterTag, filterItmType) => {
         await axios
-            .get(`${JSON_API}/items/items?` + sort + filterBrand + filterTag + filterItmType, {
+            .get(`${JSON_API}/items?` + sort + filterBrand + filterTag + filterItmType, {
                 params: {
                     _page: currentPage,
                     _limit: 15

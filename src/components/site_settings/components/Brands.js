@@ -14,7 +14,7 @@ class Brands extends Component {
     }
     searchBrand = async (event) => {
        let url = event == undefined ? '' : '?name_like=' + event.target.value.toLowerCase()
-        await fetch(`${JSON_API}/companies/companies` + url)
+        await fetch(`${JSON_API}/companies` + url)
             .then(res => res.json())
             .then(
                 (result) => { 

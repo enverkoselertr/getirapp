@@ -9,7 +9,7 @@ const initialState = {
 
 const itemsData = async (state = initialState) => {
     await axios
-        .get(`${JSON_API}/items/items`)
+        .get(`${JSON_API}/items`)
         .then(res => {
             state.products = res.data
         });

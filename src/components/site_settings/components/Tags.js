@@ -16,7 +16,7 @@ class Tags extends Component {
     searchTags = async (event) => {
         let url = event == undefined ? '' : '?name_like=' + event.target.value.toLowerCase()
         var ttags = "";
-        await axios.get(`${JSON_API}/items/items` + url).then((response) => {
+        await axios.get(`${JSON_API}/items` + url).then((response) => {
             response.data.forEach(element => {
                 ttags += element.tags + ',';
             });

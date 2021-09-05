@@ -21,7 +21,7 @@
     "web-vitals": "^1.0.1"
   },
   "scripts": {
-    "create-db": "node src/db/index.js",
+    "create-db": "node index.js",
     "start": "concurrently \"react-scripts start\" \"json-server --watch db.json --port 3001\"",
     "build": "react-scripts build", 
     "test": "react-scripts test",

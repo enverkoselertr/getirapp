@@ -10,13 +10,13 @@ function App() {
       <Header />
       <div className="container mt-7">
         <div className="row">
-          <div className="col-md-3">
+          <div className="col-md-3 d-none d-xs-none d-sm-block">
             <Settings />
           </div>
           <div className="col-md-6">
             <Product />
           </div>
-          <div className="col-md-3 d-none d-xs-block">
+          <div className="col-md-3 d-none d-xs-none d-sm-block">
             <Basket />
           </div>
         </div>

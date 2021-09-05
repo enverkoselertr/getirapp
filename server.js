@@ -10,6 +10,7 @@ server.use(jsonServer.rewriter({
 }))
 
 server.use(router);
+server.use(middlewares);
 server.listen(PORT, () => {
   console.log('Server is running');
 });
